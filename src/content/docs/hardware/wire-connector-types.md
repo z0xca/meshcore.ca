@@ -4,7 +4,9 @@ sidebar:
   order: 5
 ---
 
-_Page in progress_
+:::note
+Page in progress
+:::
 
 Here are some wire connectors used across our repeater builds:
 

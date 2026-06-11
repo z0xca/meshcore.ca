@@ -34,6 +34,7 @@ These options come fully assembled; simply flash MeshCore and mount them in a hi
 :::caution[SenseCAP Solar Node P1 Notes]
 To build out a SenseCAP Solar Node P1, you need to purchase the **4 items below**: the node itself, batteries, an upgraded antenna, and the correct pigtail cable.
 :::
+
 | Product | Notes | Link |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | **SenseCAP Solar Node P1 w/o GPS & Battery** | Solar-powered communication node using the XIAO nRF52840 Plus + Wio-SX1262 LoRa module. Includes a 5W solar panel, IPX5 waterproofing. | [RobotShop (Canadian Store)](https://ca.robotshop.com/products/sensecap-solar-node-p1-meshtastic-w-o-gps-battery) |

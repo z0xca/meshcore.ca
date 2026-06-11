@@ -10,16 +10,16 @@ sidebar:
 <details>
   <summary>What frequencies does MeshCore use in Canada?</summary>
   MeshCore Canada communities should start with the USA/Canada (Recommended) preset.
-  
+
   If your app or config tool shows raw radio values instead of a named preset, use:
-  
+
   | Field            | Value         |
   | ---------------- | ------------- |
   | Frequency        | `910.525 MHz` |
   | Bandwidth        | `62.5 kHz`    |
   | Spreading Factor | `SF7`         |
   | Coding Rate      | `5`           |
-  
+
   Always check your local province or community page in case a nearby mesh publishes a different setting.
 </details>
 
@@ -46,7 +46,7 @@ If you are operating as an amateur radio station or using non-standard equipment
 <details>
   <summary>What range should I expect?</summary>
   Range depends heavily on antenna quality, height, terrain, obstructions, noise floor, and line of sight. A handheld device indoors may only cover a neighborhood. A well-placed outdoor repeater with a clear antenna view can cover much more.
-  
+
   For troubleshooting, compare against a nearby known-good node before assuming the firmware or MQTT path is broken.
 
 </details>
@@ -56,14 +56,14 @@ If you are operating as an amateur radio station or using non-standard equipment
 <details>
   <summary>What devices are compatible with MeshCore?</summary>
   Use devices listed by the MeshCore Flasher or by a MeshCore Canada build guide for the role you need. Compatibility varies by radio chip, flash size, board wiring, display, battery hardware, and WiFi support.
-  
+
   Standalone MQTT observer firmware targets WiFi-capable LoRa boards published by the [observer flasher setup guide](../../../analyzer/builds/mqtt-firmware).
 </details>
 
 <details>
   <summary>Can I use my Meshtastic device with MeshCore?</summary>
   Sometimes, but it must be flashed with MeshCore firmware and supported by the MeshCore build you choose. A device running Meshtastic firmware will not join a MeshCore mesh.
-  
+
   Back up any identity or configuration you care about before reflashing. Treat a first MeshCore flash as a new setup.
 </details>
 

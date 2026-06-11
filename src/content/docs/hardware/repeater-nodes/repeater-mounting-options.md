@@ -34,16 +34,17 @@ Examples of poles:
   \*\* Can be linked together to increase pole length (ensure proper anchoring)
 - [3/4 x 36-inch steel tube](https://www.homedepot.ca/product/paulin-3-4-x-36-inch-round-steel-tube/1000126774)
 
-**Pole mount Alfa 5.8dBi Antenna**
+#### Pole mount Alfa 5.8dBi Antenna
 
 Stéphane P created this 3D print to allow pole mounting of the Alfa 5.8 dBI Antenna
-![](../../../../assets/hardware/repeater-nodes/repeater-mounting-options/PoleMount.jpg)
+
+![Roof pole mount](../../../../assets/hardware/repeater-nodes/repeater-mounting-options/PoleMount.jpg)
 
 - [Download STL](https://drive.google.com/file/d/1wIU9kLxolzM9vPUB35ETY1sCPLGvtfFu/view?usp=share_link)
 
-**Pole mount on chimney**
+Pole mount on chimney
 
-![](../../../../assets/hardware/repeater-nodes/repeater-mounting-options/ChimneyMount.jpg)
+![Chimney pole mount](../../../../assets/hardware/repeater-nodes/repeater-mounting-options/ChimneyMount.jpg)
 
 ---
 
@@ -55,7 +56,7 @@ Community member **Aussiemandias** designed a specialized 3D printable gutter mo
 - Attaches directly to house gutters without the need for drilling into walls.
 - Provides a stable base while keeping the antenna elevated.
 
-![](../../../../assets/hardware/repeater-nodes/repeater-mounting-options/RAKUnify_GutterMounted.jpeg)
+![Gutter Mount](../../../../assets/hardware/repeater-nodes/repeater-mounting-options/RAKUnify_GutterMounted.jpeg)
 
 - [Download STL](https://drive.proton.me/urls/A0P57SRHT0#voPRasptRVbW)
 
@@ -66,7 +67,7 @@ Community member **Aussiemandias** designed a specialized 3D printable gutter mo
 - Standard 3 foot ABS pipe from Home Depot, 3" in diameter.
 - ABS cement on the one side attached to the extension and on the side attached to the house two self-tapping screws in both sides as a safety measure, which allows removal in the future.
 
-![](../../../../assets/hardware/repeater-nodes/repeater-mounting-options/VentPipeExtension.jpg)
+![Vent pipe extension mount](../../../../assets/hardware/repeater-nodes/repeater-mounting-options/VentPipeExtension.jpg)
 
 ---
 

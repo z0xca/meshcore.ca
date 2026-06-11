@@ -27,9 +27,11 @@ Follow each step carefully for a reliable and weatherproof build.
 | **Battery Protection ^** | Space Hedgehog (Local Store) Li-ion PCM                    | $6.00      | [Space Hedgehog](https://space-hedgehog.com/products/battery-protection-with-low-voltage-cut-off?variant=51646910660664)            |
 | **Vent**                 | Waterproof Vent Plug (M12X1.5-10)                          | $6.12      | [AliExpress](https://aliexpress.com/item/1005006370919409.html)                                                                     |
 
-^ If you're using the Makerfocus flat battery: This already includes a PCM, the extra PCM is an added safety measure. If you're using unprotected batteries (e.g., 18650 button top), then you will need to purchase a PCM.
+:::note
+If you're using the Makerfocus flat battery: This already includes a PCM, the extra PCM is an added safety measure. If you're using unprotected batteries (e.g., 18650 button top), then you will need to purchase a PCM.
+:::
 
-**Approximate total cost: $180 CAD**
+Approximate total cost: $180 CAD
 
 ---
 
@@ -64,21 +66,21 @@ Follow each step carefully for a reliable and weatherproof build.
 
 9. Mount the RAK unit onto the backplate, see picture below for what it should look like at this step.
 
-   ![](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/BuildRepeater1_MountedAll.jpeg)
+   ![RAK unit mounted onto the backplate](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/BuildRepeater1_MountedAll.jpeg)
 
 10. Connect the JST PHR-2 cable to the RAK19003 battery plug, **ensuring correct polarity** (many JST cables are wired incorrectly).
 
-    ![](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/RAK19003-Layout.png)
+    ![RAK19003 battery plug](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/RAK19003-Layout.png)
 
 11. Connect the other end of this cable to the **CHG** side of the Li-ion PCM. The following picture of the PCM is from VoltaicEnclosures which is what we used initially, but it is the same principle for our current recommended PCM:
 
-    ![](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/VoltaicEnclosures_Layout.png)
+    ![VoltaicEnclosures layout](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/VoltaicEnclosures_Layout.png)
 
 12. Slide a piece of heat-shrink tubing over the cable large enough to cover the PCM before connecting the battery.
 
 13. Connect the LiPo JST PHR-2 cable to the **BATT** side of the PCM, again **ensuring polarity is correct**.
 
-    ![](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/RAK19003-LayoutSolar.jpg)
+    ![BATT side of the PCM](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/RAK19003-LayoutSolar.jpg)
 
 14. Heat-shrink the Li-ion PCM so the entire board is covered.
 
@@ -86,7 +88,7 @@ Follow each step carefully for a reliable and weatherproof build.
 
 16. (Optional) Secure the battery to the backplate with double-sided tape or mounting hardware. It should look like the below image.
 
-    ![](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/BuildRepeater1_Finished.jpeg)
+    ![Secured PCM and battery](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/BuildRepeater1_Finished.jpeg)
 
 17. Fit the rubber seal into the groove around the edge of the front plate of the box.
 
@@ -102,7 +104,7 @@ Follow each step carefully for a reliable and weatherproof build.
 
 21. Apply a bead of clear outdoor silicone caulk around the base of the N-type connector to prevent water from leaking into the box.
 
-    ![](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/BuildRepeater1_SelfFuseTape.jpeg)
-    ![](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/BuildRepeater1_Heatshrink.jpg)
+    ![Silicone caulk angle 1](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/BuildRepeater1_SelfFuseTape.jpeg)
+    ![Silicone caulk angle 2](../../../../assets/hardware/repeater-nodes/repeater-solar-300mw-diy-build/BuildRepeater1_Heatshrink.jpg)
 
 22. (Optional) Add a bead of silicone caulk along the top edge of the box seal (between the two plates) and around the base of the antenna as extra waterproofing protection.

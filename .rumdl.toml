@@ -1,2 +1,5 @@
 [global]
 disable = ["MD013", "MD057", "MD033"]
+
+[per-file-flavor]
+"**/*.mdx" = "mdx"

@@ -6,7 +6,7 @@ title: Getting Started
 More hardware-specific walkthroughs are still being added. These network settings are the current MeshCore Canada baseline.
 :::
 
-## Welcome to MeshCore!
+## Welcome to MeshCore
 
 MeshCore Canada communities generally use the same radio preset and path settings so companions, repeaters, room servers, and observers can hear each other reliably.
 

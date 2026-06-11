@@ -16,11 +16,11 @@ These instructions use the MeshCore mobile app and apply to both new and experie
 
 2. Tap the **Signal** icon.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_GetContactID1.png)
+   ![Signal icon](../../../../assets/meshcore/general/howto/MeshCore_GetContactID1.png)
 
-3. Tap **Advert → To Clipboard**.
+3. Tap **Advert · To Clipboard**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_GetContactID2.png)
+   ![Advert · To Clipboard button](../../../../assets/meshcore/general/howto/MeshCore_GetContactID2.png)
 
 4. Paste your contact URL anywhere you want to share it.
 
@@ -32,25 +32,21 @@ These instructions use the MeshCore mobile app and apply to both new and experie
 
 2. Tap the **three dots**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_AddContactMan1.png)
+   ![Three dots icon](../../../../assets/meshcore/general/howto/MeshCore_AddContactMan1.png)
 
 3. Tap **Add Contact**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_AddContactMan2.png)
+   ![Add Contact button](../../../../assets/meshcore/general/howto/MeshCore_AddContactMan2.png)
 
 4. Tap **Import from Clipboard Link**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_AddContactMan3.png)
+   ![Import from Clipboard Link button](../../../../assets/meshcore/general/howto/MeshCore_AddContactMan3.png)
 
-5. After a few seconds you will see:
+5. After a few seconds you will see "Success - contact has been imported"
 
-   **"Success - contact has been imported"**
+   ![New Contact Discovered and Success - Contact has been imported notificatons](../../../../assets/meshcore/general/howto/MeshCore_AddContactMan5.png)
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_AddContactMan5.png)
-
-6. A second popup appears:
-
-   **"New Contact Discovered \<NAME\>"**
+6. A second popup appears: "New Contact Discovered \<NAME\>"
 
 7. The contact is now added.
 
@@ -62,27 +58,27 @@ These instructions use the MeshCore mobile app and apply to both new and experie
 
 2. Tap the **three dots**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute1.png)
+   ![Three dots icon](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute1.png)
 
 3. Tap **Tools**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2.png)
+   ![Tools button](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2.png)
 
-4. Tap **Trace Path - Manual**.
+4. Tap **Trace Path · Manual**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute3.png)
+   ![Trace Path · Manual card](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute3.png)
 
 5. Tap the **plus button**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute4.png)
+   ![Plus button](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute4.png)
 
 6. Select a repeater and confirm.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute1Hop1.png)
+   ![Check and confirm buttons](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute1Hop1.png)
 
 7. You will see one repeater ID; this indicates a **1-hop trace**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute1Hop2.png)
+   ![Path input field and Run Trace button](../../../../assets/meshcore/general/howto/MeshCore_TraceRoute1Hop2.png)
 
 8. Tap **Trace Path**.
 
@@ -94,19 +90,19 @@ These instructions use the MeshCore mobile app and apply to both new and experie
 
 2. Tap the **three dots**.
 
-   ![](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute1.png)
+   ![Three dots icon](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute1.png)
 
 3. Tap **Tools**.
 
-   ![](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2.png)
+   ![Tools button](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2.png)
 
-4. Tap **Trace Path - Manual**.
+4. Tap **Trace Path · Manual**.
 
-   ![](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute3.png)
+   ![Trace Path · Manual card](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute3.png)
 
 5. Tap the **plus button**.
 
-   ![](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute4.png)
+   ![Plus button](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute4.png)
 
 6. Select repeaters **in order**:
    - Choose the **forward path**
@@ -115,15 +111,15 @@ These instructions use the MeshCore mobile app and apply to both new and experie
    - Or manually enter IDs:
    - Example: `d3, f3, d3`
 
-     ![](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2Hop1.png)
+   ![Check and confirm buttons](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2Hop1.png)
 
 7. Confirm both forward and return paths, then tap **Trace**.
 
-   ![](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2Hop2.png)
+   ![Path input field and Run Trace button](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2Hop2.png)
 
 8. View the results.
 
-   ![](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2Hop3.png)
+   ![Trace route results](./../../../../assets/meshcore/general/howto/MeshCore_TraceRoute2Hop3.png)
 
 ---
 
@@ -143,19 +139,19 @@ When you send a message out, the packet travels through the airwaves, hits a nea
 
 2. When the app shows **Heard X repeats** under your message, press and hold the message.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_HeardRepeats_Step1.png)
+   ![Heard X repeats indicator](../../../../assets/meshcore/general/howto/MeshCore_HeardRepeats_Step1.png)
 
 3. Tap **Heard Repeats**.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_HeardRepeats_Step2.png)
+   ![Heard Repeats card](../../../../assets/meshcore/general/howto/MeshCore_HeardRepeats_Step2.png)
 
 4. You’ll see a list of every repeater your companion heard repeating that packet.
 
-   ![](../../../../assets/meshcore/general/howto/MeshCore_HeardRepeats_Step3.png)
+   ![List of repeaters repeating the packet](../../../../assets/meshcore/general/howto/MeshCore_HeardRepeats_Step3.png)
 
 5. Tap a repeater in the list to view the path the repeated packet took to get back to you. See Below for the types of repeats you will see.
 
-**Notes**
+### Notes
 
 - A repeater may show up as a **direct hop** if it is close to you.
 - You may also see a **distant repeater** listed. This happens when that repeater hears your packet shortly after another one and your companion hears both repeats.

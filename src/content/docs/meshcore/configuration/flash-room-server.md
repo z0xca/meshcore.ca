@@ -7,7 +7,7 @@ sidebar:
 
 ## Flashing the Firmware
 
-1. Open the MeshCore Web Flasher: [Link](https://meshcore.io/flasher)
+1. Open the [MeshCore Web Flasher](https://meshcore.io/flasher)
 
 2. Select your device from the list.
 
