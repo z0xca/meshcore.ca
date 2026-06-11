@@ -1,5 +1,7 @@
 ---
 title: Building a 1W Solar Repeater – Ikoka Stick
+sidebar:
+  label: 1W Solar Repeater Build Guide
 ---
 
 Authored By: MrAlders0n (Ottawa)

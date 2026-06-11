@@ -9,9 +9,10 @@ You can choose between **pre-built repeaters** or **DIY builds**, and both are g
 
 Pre-built units have improved a lot in reliability and price, while DIY builds remain popular for those who like full control over their hardware.
 
-:::cautio[Upgrade the repeater antenna]
+:::caution[Upgrade the repeater antenna]
 The included antenna performs poorly on all of these models. Plan to replace it, and upgrade to at least the ALFA 5.8 dBi.
-See: [Recommended Antennas](recommended-antenna)
+See: [Recommended Antennas](../recommended-antenna)
+:::
 
 ---
 

@@ -1,5 +1,7 @@
 ---
 title: Building a Solar Node – Rak Unify Box
+sidebar:
+  label: 300mW Solar Repeater Build Guide
 ---
 
 Authored By: MrAlders0n (Ottawa)

@@ -16,9 +16,10 @@ Add the MeshCore.ca broker pair to an existing pyMC repeater installation. PyMC 
 
 ### 1. Set Your IATA Code
 
-In `/etc/pymc_repeater/config.yaml`, set your region code under the MQTT section:
+Set your region code under the MQTT section:
 
 ```yaml
+<!-- /etc/pymc_repeater/config.yaml -->
 mqtt:
   iata_code: YOW
 ```
@@ -32,6 +33,7 @@ Also confirm the underlying repeater is on the MeshCore Canada network settings:
 Paste the following under `mqtt.brokers` in your config file:
 
 ```yaml
+<!-- /etc/pymc_repeater/config.yaml -->
 - name: MeshCore-CA
   enabled: true
   host: mqtt1.meshcore.ca
@@ -65,6 +67,7 @@ Paste the following under `mqtt.brokers` in your config file:
 You can also set these optional fields in the `mqtt` section:
 
 ```yaml
+<!-- /etc/pymc_repeater/config.yaml -->
 mqtt:
   owner: "your-public-key"
   email: "you@example.com"
