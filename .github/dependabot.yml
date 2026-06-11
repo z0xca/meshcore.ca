@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "bun"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    cooldown:
+      default-days: 3
+    groups:
+      all-dependencies:
+        update-types:
+          - "minor"
+          - "patch"
