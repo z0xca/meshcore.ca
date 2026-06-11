@@ -5,7 +5,7 @@ import starlightAutoSidebar from "starlight-auto-sidebar";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://meshcore.ca",
+  site: "https://z0xca.github.io",
   integrations: [
     starlight({
       plugins: [starlightAutoSidebar()],
