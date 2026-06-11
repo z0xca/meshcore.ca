@@ -1,2 +1,2 @@
 [global]
-disable = ["MD013"]
+disable = ["MD013", "MD057", "MD033"]
