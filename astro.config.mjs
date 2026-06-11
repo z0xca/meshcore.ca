@@ -63,4 +63,7 @@ export default defineConfig({
       lastUpdated: true,
     }),
   ],
+  devToolbar: {
+    enabled: false,
+  },
 });
