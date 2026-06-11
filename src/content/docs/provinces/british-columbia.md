@@ -6,8 +6,8 @@ sidebar:
 
 ## Salish Mesh
 
-| Field | Value |
-|-------|-------|
-| Region | Salish Sea and surrounding area |
-| Status | Active |
-| Website | <https://salishmesh.net/> |
+| Field   | Value                           |
+| ------- | ------------------------------- |
+| Region  | Salish Sea and surrounding area |
+| Status  | Active                          |
+| Website | <https://salishmesh.net/>       |

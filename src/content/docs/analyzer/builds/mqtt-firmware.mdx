@@ -3,7 +3,7 @@ title: MQTT Firmware (Standalone Observer)
 ---
 
 import { LinkCard, CardGrid } from "@astrojs/starlight/components";
-import CommandBuilder from '../../../../components/CommandBuilder.astro';
+import CommandBuilder from "../../../../components/CommandBuilder.astro";
 
 Flash standalone MQTT observer firmware with the [MeshCore observer flasher](https://observer.gessaman.com/). MeshCore Canada no longer hosts separate observer firmware binaries on this page.
 
@@ -27,16 +27,16 @@ First flashing observer firmware, especially on boards with a changed partition 
 
 Use the repeater or room server setup screen where possible. If a setting is not exposed in the setup screen, use the console on the flasher page and paste the CLI commands below.
 
-| Setting | Value |
-|---------|-------|
-| Radio preset | `USA/Canada (Recommended)` |
-| Raw radio values | `910.525 MHz / 62.5 kHz / SF7 / CR5` |
-| CLI radio command | `set radio 910.525,62.5,7,5` |
-| Path hash mode | 3-byte advert path hashes: `set path.hash.mode 2` |
-| MQTT slot 1 | `meshcore-ca-1` |
-| MQTT slot 2 | `meshcore-ca-2` |
-| IATA | A real 3-letter IATA airport code near the observer |
-| WiFi | 2.4 GHz network credentials |
+| Setting           | Value                                               |
+| ----------------- | --------------------------------------------------- |
+| Radio preset      | `USA/Canada (Recommended)`                          |
+| Raw radio values  | `910.525 MHz / 62.5 kHz / SF7 / CR5`                |
+| CLI radio command | `set radio 910.525,62.5,7,5`                        |
+| Path hash mode    | 3-byte advert path hashes: `set path.hash.mode 2`   |
+| MQTT slot 1       | `meshcore-ca-1`                                     |
+| MQTT slot 2       | `meshcore-ca-2`                                     |
+| IATA              | A real 3-letter IATA airport code near the observer |
+| WiFi              | 2.4 GHz network credentials                         |
 
 :::note[IATA codes]
 Use a real airport code such as `YOW`, `YYZ`, `YUL`, `YVR`, or `YYC`. Do not use placeholders such as `XXX` or `HOME`. Do not use `CAN` as shorthand for Canada; it is an airport code for Guangzhou. See the [IATA region code list](../../iata-codes) for Canadian quick choices.

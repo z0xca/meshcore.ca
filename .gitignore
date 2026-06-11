@@ -21,6 +21,6 @@ pnpm-debug.log*
 .DS_Store
 
 # Other
+.rumdl_cache
 .claude/
 *.swp
-

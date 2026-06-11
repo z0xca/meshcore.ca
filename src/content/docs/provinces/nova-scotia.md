@@ -6,8 +6,8 @@ sidebar:
 
 ## Lunenburg County Mesh
 
-| Field | Value |
-|-------|-------|
-| Region | Lunenburg County |
-| Status | Active |
+| Field   | Value                               |
+| ------- | ----------------------------------- |
+| Region  | Lunenburg County                    |
+| Status  | Active                              |
 | Website | <http://www.lunenburgcountymesh.ca> |

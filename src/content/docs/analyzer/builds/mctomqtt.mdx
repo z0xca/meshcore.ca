@@ -2,7 +2,7 @@
 title: MCtoMQTT (USB Serial Host)
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from "@astrojs/starlight/components";
 
 Bridge a USB-connected MeshCore node to MQTT brokers using `meshcoretomqtt`. This runs on a Linux or macOS host with the device connected over USB serial.
 
@@ -12,12 +12,12 @@ The MCtoMQTT service reads packets from a MeshCore device over its serial port a
 
 ## Prerequisites
 
-| Requirement | Details |
-|-------------|---------|
-| Device | MeshCore node with packet logging enabled, connected via USB serial |
-| Host | Linux or macOS |
-| Tools | `curl` installed |
-| IATA Code | Your real 3-letter IATA airport code (e.g. `YOW` for Ottawa) |
+| Requirement   | Details                                                                |
+| ------------- | ---------------------------------------------------------------------- |
+| Device        | MeshCore node with packet logging enabled, connected via USB serial    |
+| Host          | Linux or macOS                                                         |
+| Tools         | `curl` installed                                                       |
+| IATA Code     | Your real 3-letter IATA airport code (e.g. `YOW` for Ottawa)           |
 | Mesh Settings | Connected radio uses `USA/Canada (Recommended)` and 3-byte path hashes |
 
 ## Quick Setup
@@ -80,46 +80,46 @@ The drop-in config at `/etc/mctomqtt/config.d/20-meshcore-ca.toml`:
 <details>
   <summary>View full config</summary>
 
-  ```toml
-  [general]
-  iata = "YOW"
+```toml
+[general]
+iata = "YOW"
 
-  [[broker]]
-  name = "meshcore-ca-1"
-  enabled = true
-  server = "mqtt1.meshcore.ca"
-  port = 443
-  transport = "websockets"
-  keepalive = 60
-  qos = 0
-  retain = true
+[[broker]]
+name = "meshcore-ca-1"
+enabled = true
+server = "mqtt1.meshcore.ca"
+port = 443
+transport = "websockets"
+keepalive = 60
+qos = 0
+retain = true
 
-  [broker.tls]
-  enabled = true
-  verify = true
+[broker.tls]
+enabled = true
+verify = true
 
-  [broker.auth]
-  method = "token"
-  audience = "mqtt1.meshcore.ca"
+[broker.auth]
+method = "token"
+audience = "mqtt1.meshcore.ca"
 
-  [[broker]]
-  name = "meshcore-ca-2"
-  enabled = true
-  server = "mqtt2.meshcore.ca"
-  port = 443
-  transport = "websockets"
-  keepalive = 60
-  qos = 0
-  retain = true
+[[broker]]
+name = "meshcore-ca-2"
+enabled = true
+server = "mqtt2.meshcore.ca"
+port = 443
+transport = "websockets"
+keepalive = 60
+qos = 0
+retain = true
 
-  [broker.tls]
-  enabled = true
-  verify = true
+[broker.tls]
+enabled = true
+verify = true
 
-  [broker.auth]
-  method = "token"
-  audience = "mqtt2.meshcore.ca"
-  ```
+[broker.auth]
+method = "token"
+audience = "mqtt2.meshcore.ca"
+```
 
 </details>
 
@@ -138,6 +138,7 @@ Before running the companion helper, set the companion to **USA/Canada (Recommen
 
     Add `--install-packetcapture` for a fresh install. The upstream installer will walk you through BLE, serial, or TCP connection setup.
     </div>
+
   </TabItem>
   <TabItem label="Windows PowerShell">
     <div>
@@ -147,6 +148,7 @@ Before running the companion helper, set the companion to **USA/Canada (Recommen
 
       Config is stored under `%USERPROFILE%\.meshcore-packet-capture\.env.local`.
     </div>
+
   </TabItem>
 </Tabs>
 
@@ -156,23 +158,23 @@ There is no upstream `meshcoretomqtt` Windows installer. Keep packet-log serial 
 
 ## Quick Reference
 
-| Path | Manager | Connection | Config Location |
-|------|---------|------------|-----------------|
-| Serial Host | meshcoretomqtt | USB serial | `/etc/mctomqtt/config.d/20-meshcore-ca.toml` |
-| Companion | meshcore-packet-capture | BLE, serial, or TCP | `~/.meshcore-packet-capture/.env.local` |
+| Path        | Manager                 | Connection          | Config Location                              |
+| ----------- | ----------------------- | ------------------- | -------------------------------------------- |
+| Serial Host | meshcoretomqtt          | USB serial          | `/etc/mctomqtt/config.d/20-meshcore-ca.toml` |
+| Companion   | meshcore-packet-capture | BLE, serial, or TCP | `~/.meshcore-packet-capture/.env.local`      |
 
 ## Script Options
 
-| Flag | Description |
-|------|-------------|
-| `--iata CODE` | Real 3-letter IATA airport code |
-| `--list-iata` | Show the Canadian quick-list choices |
-| `--device TYPE` | `serial-host` or `companion` |
-| `--install-mctomqtt` | Install meshcoretomqtt if not present |
-| `--install-packetcapture` | Install meshcore-packet-capture if not present |
-| `--no-restart` | Patch config without restarting the service |
-| `--config-dir PATH` | Override config dir (default: `/etc/mctomqtt`) |
-| `--service NAME` | Override systemd service name (default: `mctomqtt`) |
+| Flag                      | Description                                         |
+| ------------------------- | --------------------------------------------------- |
+| `--iata CODE`             | Real 3-letter IATA airport code                     |
+| `--list-iata`             | Show the Canadian quick-list choices                |
+| `--device TYPE`           | `serial-host` or `companion`                        |
+| `--install-mctomqtt`      | Install meshcoretomqtt if not present               |
+| `--install-packetcapture` | Install meshcore-packet-capture if not present      |
+| `--no-restart`            | Patch config without restarting the service         |
+| `--config-dir PATH`       | Override config dir (default: `/etc/mctomqtt`)      |
+| `--service NAME`          | Override systemd service name (default: `mctomqtt`) |
 
 ## Verify
 

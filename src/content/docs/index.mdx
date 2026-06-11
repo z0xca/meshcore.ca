@@ -19,7 +19,12 @@ hero:
       icon: right-arrow
 ---
 
-import { Card, LinkCard, CardGrid, LinkButton } from '@astrojs/starlight/components';
+import {
+  Card,
+  LinkCard,
+  CardGrid,
+  LinkButton,
+} from "@astrojs/starlight/components";
 
 :::note[Community Project]
 **meshcore.ca** is an independent community site. We're not affiliated with, endorsed by, or officially connected to the MeshCore or MeshOS projects. We're just a group of Canadians helping other Canadians organize their local meshes and build useful tools for the community.
@@ -33,15 +38,25 @@ import { Card, LinkCard, CardGrid, LinkButton } from '@astrojs/starlight/compone
     <LinkButton href="/meshcore/general" icon="external" iconPlacement="start">Introduction</LinkButton>
   </Card>
 
-  <Card title="Analyzer & MQTT" icon="server">
-    <p>Set up packet analysis and MQTT bridging with guides for MCat MQTT, MeshCore-HA, MQTT Firmware, and PyMC.</p>
-    <LinkButton href="/analyzer" icon="external" iconPlacement="start">Overview</LinkButton>
-  </Card>
+<Card title="Analyzer & MQTT" icon="server">
+  <p>
+    Set up packet analysis and MQTT bridging with guides for MCat MQTT,
+    MeshCore-HA, MQTT Firmware, and PyMC.
+  </p>
+  <LinkButton href="/analyzer" icon="external" iconPlacement="start">
+    Overview
+  </LinkButton>
+</Card>
 
-  <Card title="Mesh Directory" icon="comment">
-    <p>Find a MeshCore community near you. Browse by province to discover local networks, frequencies, and contacts.</p>
-    <LinkButton href="/provinces" icon="external" iconPlacement="start">Find Your Province</LinkButton>
-  </Card>
+<Card title="Mesh Directory" icon="comment">
+  <p>
+    Find a MeshCore community near you. Browse by province to discover local
+    networks, frequencies, and contacts.
+  </p>
+  <LinkButton href="/provinces" icon="external" iconPlacement="start">
+    Find Your Province
+  </LinkButton>
+</Card>
 
   <Card title="Resources" icon="open-book">
     <p>New here? Start with the Getting Started guide, browse useful links, or check the glossary.</p>
