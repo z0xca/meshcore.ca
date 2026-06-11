@@ -1,0 +1,85 @@
+---
+title: Analyzer & MQTT Packet Broker
+sidebar:
+  label: Overview
+  order: 1
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+MeshCore observers capture mesh traffic and publish packet telemetry to MQTT brokers, feeding CoreScope dashboards, maps, and packet inspectors. Pick the observer path that matches your hardware and host setup.
+
+:::tip[Observer setup checklist]
+Every observer path needs the same basics: a MeshCore radio already on the MeshCore Canada network settings, a real 3-letter IATA airport code, the MeshCore.ca broker pair, JWT token authentication, TLS on port `443`, and packet publishing enabled. If the setup screen has two broker entries, use the same IATA code on both entries.
+
+MeshCore Canada network settings are **USA/Canada (Recommended)**, or raw radio values `910.525 MHz / 62.5 kHz / SF7 / CR5`, with 3-byte path hashes. Standalone observer firmware from the observer flasher includes selectable MeshCore Canada broker presets; set `meshcore-ca-1` and `meshcore-ca-2`, then set `set path.hash.mode 2`, IATA, WiFi, and packet publishing during onboarding. On retained preferences or generic CLI devices, also run `set radio 910.525,62.5,7,5`.
+:::
+
+## Choose Your Observer Path
+
+<CardGrid>
+  <LinkCard
+    title="MQTT Firmware"
+    description="Flash observer firmware directly onto a WiFi-capable LoRa board. No host computer required after setup.<br><br> Best for: Heltec V3, Heltec V4 OLED, and other published direct MQTT targets."
+    href="/builds/mqtt-firmware/"
+  />
+  <LinkCard
+    title="MCtoMQTT"
+    description="Bridge a USB-connected MeshCore node to MQTT via a Linux or macOS host.<br><br> Best for: fixed repeaters and room servers with a nearby host machine."
+    href="/builds/mctomqtt/"
+  />
+  <LinkCard
+    title="PyMC"
+    description="Add the MeshCore.ca broker pair to an existing pyMC repeater installation.<br><br> Best for: Python-based repeater setups."
+    href="/builds/pymc/"
+  />
+  <LinkCard
+    title="Home Assistant"
+    description="Add MeshCore.ca brokers to the Home Assistant MeshCore integration.<br><br> Best for: Home Assistant users with a connected MeshCore node."
+    href="/builds/meshcore-ha/"
+  />
+  <LinkCard
+    title="RemoteTerm"
+    description="Use RemoteTerm's Community MQTT fanout to report packets from a managed radio.<br><br> Best for: RemoteTerm users already connected over serial, TCP, or BLE."
+    href="/builds/meshcore-ha/"
+  />
+</CardGrid>
+
+## Shared References
+
+<CardGrid>
+  <LinkCard
+    title="Check Your Observer"
+    description="Confirm your observer is online and reporting to CoreScope."
+    href="/analyzer/verify/"
+  />
+  <LinkCard
+    title="Troubleshooting"
+    description="Path-specific diagnostics for firmware, host bridges, PyMC, Home Assistant, and RemoteTerm."
+    href="/analyzer/troubleshooting/"
+  />
+  <LinkCard
+    title="Broker Reference"
+    description="Broker hosts, ports, TLS, JWT audience, and topic conventions."
+    href="/analyzer/broker-reference/"
+  />
+  <LinkCard
+    title="IATA Codes"
+    description="Canadian quick-list codes and guidance for choosing a real region code."
+    href="/analyzer/iata-codes/"
+  />
+</CardGrid>
+
+## Fast Path
+
+If you are unsure which path to choose:
+
+| Situation                                                         | Start here                               |
+| ----------------------------------------------------------------- | ---------------------------------------- |
+| You have a WiFi-capable LoRa board and want a standalone observer | [MQTT Firmware](../builds/mqtt-firmware) |
+| You have a repeater connected to a Linux/macOS host over USB      | [MCtoMQTT](../builds/mctomqtt)           |
+| You already run pyMC                                              | [PyMC](../builds/pymc)                   |
+| You already use Home Assistant for MeshCore                       | [MeshCore-HA](../builds/meshcore-ha)     |
+| You already manage the radio with RemoteTerm                      | [RemoteTerm](../remoteterm)              |
+
+After setup, use [Check Your Observer](../verify). If it does not appear within a few minutes, use [Troubleshooting](../troubleshooting).

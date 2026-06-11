@@ -1,0 +1,128 @@
+---
+title: MQTT Firmware (Standalone Observer)
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+import CommandBuilder from '../../../../components/CommandBuilder.astro';
+
+Flash standalone MQTT observer firmware with the [MeshCore observer flasher](https://observer.gessaman.com/). MeshCore Canada no longer hosts separate observer firmware binaries on this page.
+
+:::note[MeshCore Canada presets verified]
+The observer firmware currently offered by `observer.gessaman.com` is built from Adam Gessaman's `mqtt-bridge-implementation-flex` branch at commit `c0c845f5`. That branch includes the built-in presets `meshcore-ca-1` and `meshcore-ca-2`, pointing to `mqtt1.meshcore.ca` and `mqtt2.meshcore.ca`.
+:::
+
+## Flash The Observer
+
+1. Open [observer.gessaman.com](https://observer.gessaman.com/).
+2. Pick your board under **MQTT Observer Firmware**.
+3. Choose **Repeater** or **Room Server**.
+4. For a new board or a board you are repurposing, enable **Erase device** and flash the merged image.
+5. When flashing finishes, use **Configure via USB** for the repeater or room server setup screen, or use **Console** for CLI setup.
+
+:::caution[First flash can erase settings]
+First flashing observer firmware, especially on boards with a changed partition layout, can wipe stored settings and identity data. Back up an existing device private key before repurposing it.
+:::
+
+## Required MeshCore Canada Settings
+
+Use the repeater or room server setup screen where possible. If a setting is not exposed in the setup screen, use the console on the flasher page and paste the CLI commands below.
+
+| Setting | Value |
+|---------|-------|
+| Radio preset | `USA/Canada (Recommended)` |
+| Raw radio values | `910.525 MHz / 62.5 kHz / SF7 / CR5` |
+| CLI radio command | `set radio 910.525,62.5,7,5` |
+| Path hash mode | 3-byte advert path hashes: `set path.hash.mode 2` |
+| MQTT slot 1 | `meshcore-ca-1` |
+| MQTT slot 2 | `meshcore-ca-2` |
+| IATA | A real 3-letter IATA airport code near the observer |
+| WiFi | 2.4 GHz network credentials |
+
+:::note[IATA codes]
+Use a real airport code such as `YOW`, `YYZ`, `YUL`, `YVR`, or `YYC`. Do not use placeholders such as `XXX` or `HOME`. Do not use `CAN` as shorthand for Canada; it is an airport code for Guangzhou. See the [IATA region code list](../../iata-codes) for Canadian quick choices.
+:::
+
+## Command Builder
+
+Use this builder to create a CLI block for the flasher **Console**. It runs only in your browser.
+
+<CommandBuilder />
+
+## Manual CLI Reference
+
+If you prefer to type commands manually, replace `YOW`, `YourWiFiNetwork`, and `YourWiFiPassword` with your own values:
+
+```text
+set name YOW-Repeater-01
+set radio 910.525,62.5,7,5
+set path.hash.mode 2
+set mqtt.iata YOW
+set wifi.ssid YourWiFiNetwork
+set wifi.pwd YourWiFiPassword
+set wifi.powersave none
+set mqtt1.preset meshcore-ca-1
+set mqtt2.preset meshcore-ca-2
+set mqtt3.preset none
+set mqtt4.preset none
+set mqtt5.preset none
+set mqtt6.preset none
+set mqtt.status on
+set mqtt.packets on
+set mqtt.raw off
+set mqtt.rx on
+set mqtt.tx advert
+set bridge.enabled on
+set repeat on
+advert
+reboot
+```
+
+For an observe-only node that should not repeat mesh traffic, use:
+
+```text
+set repeat off
+```
+
+## Verify
+
+After the device reboots, reopen the flasher **Console** and run:
+
+```text
+get wifi.status
+get mqtt.iata
+get mqtt1.preset
+get mqtt2.preset
+get mqtt.status
+get path.hash.mode
+```
+
+Expected broker presets:
+
+```text
+get mqtt1.preset
+> meshcore-ca-1
+get mqtt2.preset
+> meshcore-ca-2
+```
+
+Once WiFi and MQTT are connected, use [Check Your Observer](../../verify) to confirm packets are reaching MeshCore Canada.
+
+## Useful Links
+
+<CardGrid>
+  <LinkCard
+    title="Home Assistant"
+    description="Flash MQTT observer firmware and open the serial console."
+    href="https://observer.gessaman.com/"
+  />
+  <LinkCard
+    title="IATA Region Codes"
+    description="Pick the real 3-letter airport code nearest to the observer."
+    href="../../iata-codes"
+  />
+  <LinkCard
+    title="Check Your Observer"
+    description="Confirm that the observer is online and reporting."
+    href="../../verify"
+  />
+</CardGrid>

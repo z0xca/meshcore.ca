@@ -1,0 +1,62 @@
+---
+title: Check Your Observer
+sidebar:
+  order: 2
+---
+
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+After setting up your observer using any supported path ([MQTT Firmware](../builds/mqtt-firmware), [MCtoMQTT](../builds/mctomqtt), [PyMC](../builds/pymc), [Home Assistant](../builds/meshcore-ha), or [RemoteTerm](../remoteterm)), use the links below to confirm it's online and reporting.
+
+<CardGrid>
+  <LinkCard
+    title="CoreScope Observers"
+    description="See all connected observers and their current status."
+    href="https://observer.gessaman.com/"
+  />
+  <LinkCard
+    title="IATA Region Codes"
+    description="Pick the real 3-letter airport code nearest to the observer."
+    href="https://live.meshcore.ca/#/observers"
+  />
+  <LinkCard
+    title="CoreScope Packets"
+    description="Watch live packet traffic flowing through observers in real time."
+    href="https://live.meshcore.ca/#/packets"
+  />
+  <LinkCard
+    title="MeshCore Map"
+    description="See observers and nodes plotted on the map."
+    href="https://live.meshcore.ca/#/map"
+  />
+  <LinkCard
+    title="Troubleshooting"
+    description="Not showing up? Path-specific diagnostics for all observer types."
+    href="./troubleshooting"
+  />
+</CardGrid>
+
+Your observer should appear within a few minutes of coming online.
+
+## Healthy Observer Checklist
+
+| Check           | Expected result                                                                  |
+| --------------- | -------------------------------------------------------------------------------- |
+| Observer name   | Clear node name such as `YOW-Repeater-01`                                        |
+| Region          | Nearest real IATA code, not `CAN`, `XXX`, or `HOME`                              |
+| Broker coverage | Primary and backup broker configured where the path supports both                |
+| Packet activity | Recent packet timestamps on CoreScope after nearby mesh activity                 |
+| Radio settings  | `USA/Canada (Recommended)` and 3-byte path hashes unless your local page differs |
+
+## First Checks
+
+If it does not appear, start with the checks that match the symptom:
+
+| Symptom                               | First check                                                                                                       |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| No observer entry                     | MQTT is connected and the IATA code is a real airport code                                                        |
+| Observer appears, but no packets      | Packet publishing is enabled: firmware `mqtt.packets`, HA **Payload Mode** = `packet`, or pyMC `format: letsmesh` |
+| Backup broker does not connect        | The token audience matches the broker host (`mqtt2.meshcore.ca` for broker 2)                                     |
+| Observer appears under the wrong city | Every broker/integration entry uses the nearest real IATA code; do not use `CAN` for Canada                       |
+
+For path-specific commands and Home Assistant settings, use [Troubleshooting](../troubleshooting).
